@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$primary-font: "Montserrat", sans-serif;
+$bg-color-primary: white;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$brand-color: #E31F24;
+$headers-color: #333;
+$main-text-color: #76787D;
+$border-color: #DEDEDD;
+$details-color: #E0E0E0;
+$input-border-color: #E9ECEF;
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+}
+
+$base-font-size: 14px;
