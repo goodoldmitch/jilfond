@@ -73,6 +73,7 @@ export default {
       }
       
       &:hover{
+        cursor: pointer;
         
         .search-result-item-text{
           background-color: $details-color;
