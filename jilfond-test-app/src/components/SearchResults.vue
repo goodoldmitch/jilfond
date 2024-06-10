@@ -50,6 +50,7 @@ export default {
       align-items: center;
       margin-top: 18px;
       box-shadow: 0 0 10px $shadow-color;
+      @include border-radius(10px);
 
       &-img{
         width: 70px;
@@ -81,6 +82,24 @@ export default {
         .search-result-item-text{
           background-color: $details-color;
         }
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      &-items{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      &-item{
+        width: 48%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      &-item{
+        width: 100%;
       }
     }
   }
