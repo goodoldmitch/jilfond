@@ -5,7 +5,7 @@
       <main>
         <aside>
           <SearchInput :searchQuery="searchQuery" @update:searchQuery="updateSearchQuery" />
-          <SearchResults :employees="filteredEmployees" @select-employee="selectEmployee" />
+          <SearchResults :employees="filteredEmployees" :selectedEmployeeId="selectedEmployee?.id" @select-employee="selectEmployee" />
         </aside>
         
         <section class="user-info">

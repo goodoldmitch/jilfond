@@ -3,7 +3,7 @@
     <h3>Результаты</h3>
 
     <div class="search-result-items" v-if="employees.length">
-      <div class="search-result-item" v-for="employee in employees" :key="employee.id" @click="selectEmployee(employee)">
+      <div class="search-result-item" v-for="employee in employees" :key="employee.id" @click="selectEmployee(employee)" :class="{ active: employee.id === selectedEmployeeId }">
         <div class="search-result-item-img">
           <img src="../assets/images/dummy.png" alt="{{ employee.name }}">
         </div>
@@ -20,7 +20,10 @@
 <script>
 export default {
   name: 'SearchResults',
-  props: ['employees'],
+  props: {
+    employees: Array,
+    selectedEmployeeId: Number,
+  },
   methods: {
     selectEmployee(employee) {
       this.$emit('select-employee', employee);
@@ -72,7 +75,7 @@ export default {
         }
       }
       
-      &:hover{
+      &:hover, &.active{
         cursor: pointer;
         
         .search-result-item-text{
